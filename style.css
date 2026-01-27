@@ -142,14 +142,14 @@ footer {
   color: #00b4d8;
 }
 
-/* Section membres */
-.membres {
+/* SECTION MEMBRES */
+.membres{
   padding: 80px 20px;
   background: #000;
   color: #fff;
 }
 
-.membres-titre {
+.membres-titre{
   margin: 0 0 60px;
   font-size: 48px;
   letter-spacing: 2px;
@@ -157,40 +157,41 @@ footer {
   font-weight: 500;
 }
 
-/* Grille */
-.membres-grille {
-  display: grid;
+/* ✅ LA GRILLE */
+.membres-grille{
+  display: grid !important;
   grid-template-columns: repeat(4, minmax(220px, 1fr));
-  gap: 70px 60px;
+  gap: 60px;
+  align-items: start;
 }
 
-/* Carte membre */
-.membre {
+/* CARTE */
+.membre{
   text-align: center;
 }
 
-.membre-photo {
-  width: 210px;
-  height: 210px;
+.membre-photo{
+  width: 220px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 22px;
+  display: block;
+  margin: 0 auto 18px;
 }
 
-.membre-nom {
+.membre-nom{
   margin: 0 0 10px;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 500;
 }
 
-.membre-role {
-  margin: 0 0 18px;
+.membre-role{
+  margin: 0 0 16px;
   font-size: 18px;
   opacity: 0.9;
 }
 
 /* LinkedIn */
-.membre-linkedin {
+.membre-linkedin{
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -201,67 +202,18 @@ footer {
   color: #fff;
   text-decoration: none;
   font-weight: 700;
-  font-size: 18px;
-}
-/* Section membres */
-.membres {
-  padding: 80px 20px;
-  background: #000;
-  color: #fff;
 }
 
-.membres-titre {
-  margin: 0 0 60px;
-  font-size: 48px;
-  letter-spacing: 2px;
-  color: #ff3b30;
-  font-weight: 500;
+/* RESPONSIVE */
+@media (max-width: 1100px){
+  .membres-grille{ grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+}
+@media (max-width: 850px){
+  .membres-grille{ grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+}
+@media (max-width: 520px){
+  .membres-grille{ grid-template-columns: 1fr; }
 }
 
-/* Grille */
-.membres-grille {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(220px, 1fr));
-  gap: 70px 60px;
-}
 
-/* Carte membre */
-.membre {
-  text-align: center;
-}
-
-.membre-photo {
-  width: 210px;
-  height: 210px;
-  object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 22px;
-}
-
-.membre-nom {
-  margin: 0 0 10px;
-  font-size: 26px;
-  font-weight: 500;
-}
-
-.membre-role {
-  margin: 0 0 18px;
-  font-size: 18px;
-  opacity: 0.9;
-}
-
-/* LinkedIn */
-.membre-linkedin {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 8px;
-  background: #0a66c2;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 18px;
-}
 
