@@ -198,5 +198,30 @@ footer {
   .membres-grille{ grid-template-columns: 1fr; }
   .membre-photo{ width: 240px; height: 240px; }
 }
-.membres { outline: 5px solid lime; }
+
+/* ✅ Couleurs de la section Membres = celles du site */
+.membres{
+  background: transparent; /* ou #a296ad si tu veux un fond plein */
+  color: #0d0c0c;
+}
+
+.membres-titre,
+.membre-nom,
+.membre-role{
+  color: #0d0c0c;
+}
+
+/* Lien LinkedIn : discret et cohérent */
+.membre-linkedin{
+  color: #0d0c0c;
+  border-color: #0d0c0c;
+  background: transparent;
+}
+
+.membre-linkedin:hover{
+  color: #00b4d8;
+  border-color: #00b4d8;
+}
+
+
 
