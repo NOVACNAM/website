@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background-color: #a296ad; /* Fond doux */
+  background-color: #0D2D5D; /* Fond doux */
   color: #0d0c0c;
 }
 
@@ -198,6 +198,7 @@ footer {
   .membres-grille{ grid-template-columns: 1fr; }
   .membre-photo{ width: 240px; height: 240px; }
 }
+
 
 
 
