@@ -142,69 +142,52 @@ footer {
   color: #00b4d8;
 }
 
-/* SECTION MEMBRES */
-.membres{
-  padding: 80px 20px;
-  background: #000;
-  color: #fff;
-}
-
-.membres-titre{
-  margin: 0 0 60px;
-  font-size: 48px;
-  letter-spacing: 2px;
-  color: #ff3b30;
-  font-weight: 500;
-}
-
-/* ✅ LA GRILLE */
+/* Grille des membres (sans couleurs) */
 .membres-grille{
-  display: grid !important;
+  display: grid;
   grid-template-columns: repeat(4, minmax(220px, 1fr));
-  gap: 60px;
+  gap: 48px;
   align-items: start;
 }
 
-/* CARTE */
+/* Carte membre */
 .membre{
   text-align: center;
 }
 
+/* Photo */
 .membre-photo{
   width: 220px;
   height: 220px;
   object-fit: cover;
   display: block;
-  margin: 0 auto 18px;
+  margin: 0 auto 16px;
 }
 
+/* Texte */
 .membre-nom{
-  margin: 0 0 10px;
-  font-size: 24px;
-  font-weight: 500;
+  margin: 0 0 8px;
 }
 
 .membre-role{
-  margin: 0 0 16px;
-  font-size: 18px;
-  opacity: 0.9;
+  margin: 0 0 12px;
 }
 
-/* LinkedIn */
+/* LinkedIn (neutre : hérite tes couleurs) */
 .membre-linkedin{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 8px;
-  background: #0a66c2;
-  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: 700;
+  /* Pas de background/couleur ici -> ton site décide */
+  border: 1px solid currentColor; /* optionnel, discret */
 }
 
-/* RESPONSIVE */
+/* Responsive */
 @media (max-width: 1100px){
   .membres-grille{ grid-template-columns: repeat(3, minmax(220px, 1fr)); }
 }
@@ -213,7 +196,5 @@ footer {
 }
 @media (max-width: 520px){
   .membres-grille{ grid-template-columns: 1fr; }
+  .membre-photo{ width: 240px; height: 240px; }
 }
-
-
-
