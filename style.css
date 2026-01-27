@@ -4,21 +4,22 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background-color: #0D2D5D; /* Fond doux */
-  color: ##1A3B6C;
+  background-color: #0D2D5D; /* Bleu profond */
+  color: #E6ECF5;           /* Texte clair */
 }
 
 /* 🎴 Style des cartes */
 .card {
-  background: ##1A3B6C;
+  background: #1A3B6C; /* Bleu plus clair (cartes) */
   border-radius: 12px;
   padding: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .card h3 {
   margin-top: 0;
+  color: #E6ECF5;
 }
 
 /* 🏷️ Header + menu */
@@ -28,11 +29,9 @@ header {
   align-items: center;
   background: url("images/entete.jpg") center/cover no-repeat;
   padding: 40px 60px; /* Plus d’espace autour */
-  min-height: 250px; /* Ajuste la hauteur pour agrandir l’image */
-  color: #fff;
-  /* ❌ Suppression du position: sticky et top: 0 */
+  min-height: 250px;  /* Ajuste la hauteur pour agrandir l’image */
+  color: #ffffff;
 }
-
 
 header h1 {
   font-size: 2rem;
@@ -42,7 +41,7 @@ header h1 {
 
 /* Menu de navigation */
 header nav a {
-  color: #ffffff;
+  color: #E6ECF5;
   margin-left: 20px;
   text-decoration: none;
   font-weight: bold;
@@ -51,21 +50,21 @@ header nav a {
 }
 
 header nav a:hover {
-  color: #00b4d8;
-  border-bottom: 2px solid #00b4d8;
+  color: #00B4D8;
+  border-bottom: 2px solid #00B4D8;
 }
 
 /* 📄 Sections */
 section {
-  padding: 20px 40px;
+  padding: 40px 40px;
 }
 
 /* 📌 Footer */
 footer {
-  background: #333;
-  color: white;
+  background: #081F3D;
+  color: #C7D4E8;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
 }
 
 /* 🛰️ Projets (mise en page en deux colonnes) */
@@ -94,7 +93,7 @@ footer {
   max-height: 250px;
   object-fit: contain;
   border-radius: 12px;
-  background: #fff;
+  background: #E6ECF5; /* clair pour contraster */
   padding: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
@@ -112,38 +111,43 @@ footer {
 .timeline-content h3 {
   margin: 0;
   font-size: 1.1rem;
-  color: #000;
+  color: #E6ECF5;
 }
 
 .timeline-content p {
   margin: 5px 0;
-  color: #000;
+  color: #C7D4E8;
   font-size: 0.95rem;
 }
 
 .etablissement {
   font-style: italic;
   font-size: 0.9rem;
-  color: #000;
+  color: #C7D4E8;
 }
 
+/* 📞 Contact */
 .contact-card {
   text-align: center;
 }
+
 .contact-card p {
   margin: 8px 0;
+  color: #C7D4E8;
 }
+
 .contact-card a {
-  color: #000000;
+  color: #E6ECF5;
   font-weight: normal;
   text-decoration: none;
 }
+
 .contact-card a:hover {
-  color: #00b4d8;
+  color: #00B4D8;
 }
 
-/* Grille des membres (sans couleurs) */
-.membres-grille{
+/* 👥 Membres - Grille */
+.membres-grille {
   display: grid;
   grid-template-columns: repeat(4, minmax(220px, 1fr));
   gap: 48px;
@@ -151,30 +155,34 @@ footer {
 }
 
 /* Carte membre */
-.membre{
+.membre {
   text-align: center;
 }
 
 /* Photo */
-.membre-photo{
+.membre-photo {
   width: 220px;
   height: 220px;
   object-fit: cover;
   display: block;
   margin: 0 auto 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
 
 /* Texte */
-.membre-nom{
+.membre-nom {
   margin: 0 0 8px;
+  color: #E6ECF5;
 }
 
-.membre-role{
+.membre-role {
   margin: 0 0 12px;
+  color: #C7D4E8;
 }
 
-/* LinkedIn (neutre : hérite tes couleurs) */
-.membre-linkedin{
+/* LinkedIn */
+.membre-linkedin {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -183,25 +191,45 @@ footer {
   border-radius: 10px;
   text-decoration: none;
   font-weight: 700;
-  /* Pas de background/couleur ici -> ton site décide */
-  border: 1px solid currentColor; /* optionnel, discret */
+  color: #00B4D8;
+  border: 1px solid #00B4D8;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.membre-linkedin:hover {
+  background: #00B4D8;
+  color: #0D2D5D;
+  transform: translateY(-2px);
 }
 
 /* Responsive */
-@media (max-width: 1100px){
-  .membres-grille{ grid-template-columns: repeat(3, minmax(220px, 1fr)); }
-}
-@media (max-width: 850px){
-  .membres-grille{ grid-template-columns: repeat(2, minmax(220px, 1fr)); }
-}
-@media (max-width: 520px){
-  .membres-grille{ grid-template-columns: 1fr; }
-  .membre-photo{ width: 240px; height: 240px; }
+@media (max-width: 1100px) {
+  .membres-grille {
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+  }
 }
 
+@media (max-width: 850px) {
+  .membres-grille {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}
 
+@media (max-width: 520px) {
+  .membres-grille {
+    grid-template-columns: 1fr;
+  }
 
+  .membre-photo {
+    width: 240px;
+    height: 240px;
+  }
 
+  header {
+    padding: 30px 20px;
+  }
 
-
-
+  section {
+    padding: 25px 20px;
+  }
+}
