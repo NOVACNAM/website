@@ -27,7 +27,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: url("imageedit_9_8010821351.png") center/cover no-repeat;
+  background: url("logos.png") center/cover no-repeat;
   padding: 40px 60px; /* Plus d’espace autour */
   min-height: 250px;  /* Ajuste la hauteur pour agrandir l’image */
   color: #ffffff;
@@ -233,4 +233,5 @@ footer {
     padding: 25px 20px;
   }
 }
+
 
